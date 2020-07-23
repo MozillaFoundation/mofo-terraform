@@ -12,8 +12,8 @@
             },
             {
                 "type": "array",
-                "items": { "oneOf": 
-                  [   
+                "items": { "oneOf":
+                  [
                     { "type": "string" },
                     { "type": "object" },
                     { "type": "array" }

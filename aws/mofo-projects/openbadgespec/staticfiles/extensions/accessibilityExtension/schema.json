@@ -21,7 +21,7 @@
     },
     "url":{
       "type": "string",
-      "format": "uri"    	
+      "format": "uri"
     },
     "required": ["url","accessibilityFeature"]
   }
