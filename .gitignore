@@ -1,0 +1,6 @@
+*.tfvars
+.terraform/
+.idea/
+tf.plan
+*.tfstate*
+.DS_Store

@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"title": "RecipientProfile schema",
+	"description": "An assertion extension that may be used to include more information about the recipient of a badge. More properties will be added later.",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "A hosted or decentralized resolvable IRI identifier for the profile."
+		},
+		"name": {
+			"type": "string",
+			"description": "Name of recipient, http://schema.org/name"
+		}
+	}
+}
