@@ -19,7 +19,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   comment             = "Responsible Design Toolkit Cloudfront Distribution"
   default_root_object = "index.html"
 
-//  aliases = ["openbadgespec.org", "www.openbadgespec.org"]
+//  aliases = ["responsibledesign.tech"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
