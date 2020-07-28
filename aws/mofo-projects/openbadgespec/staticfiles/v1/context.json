@@ -27,7 +27,7 @@
     "description": { "@id": "schema:description" },
     "url": { "@id": "schema:url", "@type": "@id" },
     "image": { "@id": "schema:image", "@type": "@id" },
- 
+
     "uid": { "@id": "obi:uid" },
     "recipient": { "@id": "obi:recipient", "@type": "@id" },
     "hashed": { "@id": "obi:hashed", "@type": "xsd:boolean" },

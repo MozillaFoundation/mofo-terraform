@@ -2,7 +2,7 @@
   "@context": {
     "id": "@id",
     "type": "@type",
-    
+
     "obi": "https://w3id.org/openbadges#",
     "extensions": "https://w3id.org/openbadges/extensions#",
     "Assertion": "obi:Assertion",

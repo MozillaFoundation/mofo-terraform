@@ -7,10 +7,10 @@
     "@graph":{
       "type": "array",
       "items": {
-        "type": "object", 
+        "type": "object",
         "properties": {
           "id": {
-            "type": "string", 
+            "type": "string",
             "format": "url"
           },
           "name": {
