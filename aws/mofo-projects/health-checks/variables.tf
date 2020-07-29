@@ -17,8 +17,10 @@ variable "high-priority-services" {
   }
 }
 
-//variable "low-priority-services" {
-//  description = "Services in that list will send an email if down"
-//  type        = list
-//  default     = []
-//}
+variable "low-priority-services" {
+  description = "Services in that list will send an email if down"
+  type        = map
+  default = {
+    "Internet-health-report" = "internethealthreport.org"
+  }
+}
