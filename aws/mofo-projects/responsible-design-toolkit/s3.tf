@@ -41,9 +41,12 @@ locals {
     svg         = "image/svg+xml",
     jpg         = "image/jpeg",
     png         = "image/png",
+    gif         = "image/gif",
+    ico         = "image/x-icon",
     map         = "application/json",
     pdf         = "application/pdf",
-    webmanifest = "application/manifest+json"
+    webmanifest = "application/manifest+json",
+    txt         = "text/plain"
   }
 }
 
@@ -54,10 +57,10 @@ resource "aws_s3_bucket_object" "src_files" {
   # Create an object from each
   bucket        = aws_s3_bucket.bucket.id
   key           = replace(each.value, local.src_dir, "")
-  source        = "./${local.src_dir}/${each.value}"
+  source        = "${local.src_dir}/${each.value}"
   acl           = "private"
   cache_control = "max-age=86400"
-  etag          = filemd5("./${local.src_dir}/${each.value}")
+  etag          = filemd5("${local.src_dir}/${each.value}")
   content_type  = lookup(local.content_type_map, regex("\\.(?P<extension>[A-Za-z0-9]+)$", each.value).extension, "application/octet-stream")
   tags          = local.tags
 }
