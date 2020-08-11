@@ -19,7 +19,10 @@ resource "aws_cloudfront_distribution" "distribution" {
   comment             = "Responsible Design Toolkit Cloudfront Distribution"
   default_root_object = "index.html"
 
-//  aliases = ["responsibledesign.tech"]
+  aliases = [
+    "responsibledesign.tech",
+    "www.responsibledesign.tech"
+  ]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
@@ -49,9 +52,8 @@ resource "aws_cloudfront_distribution" "distribution" {
   tags = local.tags
 
   viewer_certificate {
-    cloudfront_default_certificate = true
-//    acm_certificate_arn = aws_acm_certificate.cert.arn
-//    ssl_support_method  = "sni-only"
+    acm_certificate_arn      = aws_acm_certificate.cert.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2018"
   }
-
 }

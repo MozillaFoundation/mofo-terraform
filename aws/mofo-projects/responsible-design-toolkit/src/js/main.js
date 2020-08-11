@@ -4,6 +4,36 @@
 		
 		'use strict';
 
+		// let firstTop = $( window ).height();
+		// let docHeight = $(document).height();
+		// console.log(firstTop);
+		
+		// // scroll spy on homepage
+		// $(window).scroll(function() {
+
+		// 	var homeTop = $(this).scrollTop();
+		// 	console.log(homeTop);
+
+		// 	var lineHeight = $(".line").height();
+
+		// 	if(homeTop > firstTop) {
+		// 		var newHeight = lineHeight - (1 + homeTop / docHeight);
+		// 	}
+			
+		// 	if(homeTop < firstTop) {
+		// 		var newHeight = lineHeight + (homeTop / docHeight);
+		// 	}
+
+		// 	$(".line").height(newHeight);
+
+		// 	firstTop = homeTop;
+
+		// }).delay( 500 );
+
+
+
+
+
 		var menuItems = $(".inpage-nav").find("a");
 
 		// Anchors corresponding to menu items
@@ -61,8 +91,7 @@
 		});
 
 
-		var bottom = $( ".copy p" ).last().offset().top;
-		console.log("h2 bototm: " + bottom);
+		//var bottom = $( ".copy p" ).last().offset().top;
 
 		// inpage nav stick to bottom of div
 		window.addEventListener('scroll', function(e) {
