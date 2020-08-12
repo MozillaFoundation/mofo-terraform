@@ -7,19 +7,19 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Open Graph / Facebook -->
+<!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
+  <meta property="og:url" content="https://responsibledesign.tech">
   <meta property="og:title" content="Responsible Design for Digial Communities">
   <meta property="og:description" content="If you're a community organizer, designer or an engineer, these best practices are designed to help guide in creating and designing community spaces online for participants and organizers.">
-  <meta property="og:image" content="/img/hero002-sm.jpg">
+  <meta property="og:image" content="https://responsibledesign.tech/img/hero002-sm.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="">
+  <meta property="twitter:url" content="https://responsibledesign.tech">
   <meta property="twitter:title" content="Responsible Design for Digial Communities">
   <meta property="twitter:description" content="If you're a community organizer, designer or an engineer, these best practices are designed to help guide in creating and designing community spaces online for participants and organizers.">
-  <meta property="twitter:image" content="/img/hero002-sm.jpg">
+  <meta property="twitter:image" content="https://responsibledesign.tech/img/hero002-sm.jpg">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -174,7 +174,7 @@
         <p>2020 © All rights reserved</p>
       </div>
       <div class="col-12 col-md-6 text-left text-md-right extra">
-        <p>Something &middot; Privacy &middot; Terms</p>
+        <p><a href="https://www.mozilla.org/en-US/privacy/websites/">Privacy</a> &middot; <a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/">Terms</a></p>
       </div>
     </div>
   </div>
@@ -185,6 +185,43 @@
   <script src="js/vendor/bootstrap.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    function WebAnalytics() {
+
+     var _dntStatus = navigator.doNotTrack || navigator.msDoNotTrack;
+
+     var fxMatch = navigator.userAgent.match(/Firefox\/(\d+)/);
+
+     var ie10Match = navigator.userAgent.match(/MSIE 10/i);
+
+     var w8Match = navigator.appVersion.match(/Windows NT 6.2/);
+
+     if (fxMatch && Number(fxMatch[1]) < 32) {
+
+        _dntStatus = 'Unspecified';
+
+     } else if (ie10Match && w8Match) {
+
+         _dntStatus = 'Unspecified';
+
+     } else {
+
+        _dntStatus = { '0': 'Disabled', '1': 'Enabled' }[_dntStatus] || 'Unspecified';
+
+     }
+
+      if (_dntStatus !== 'Enabled'){
+
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-87658599-21', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview');
+
+
+      }
+
+    }
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
