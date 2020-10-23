@@ -4,8 +4,12 @@ Terraform code for MoFo's infrastructure.
 
 ## How to use
 
-- `terraform plan -out tf.plan`: export the changes terraform plans to apply to a `tf.plan` file.
-- `terraform apply tf.plan`: if you agree with the plan, you can apply it that way.
+- Set-up your CLI for AWS - install `awscli` and `maws`, install Terraform, and get an team member to add you to the correct LDAP group on people.mozilla.org.
+- Use maws to add the required profile to your AWS configuration - `$(maws -o awscli)`
+- Navigate to the directory you want to work in and execute `terraform init` to sync state from S3.
+- Execute `terraform plan -out tf.plan` to plan the changes.
+- Check the output to confirm the changes are what you expect
+- execute `terraform apply "tf.plan"` and monitor for any unexpected issues.
 
 ## Pre-commit hooks
 
